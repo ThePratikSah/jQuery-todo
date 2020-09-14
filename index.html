@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo with Jq</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="main">
+      <h1>Static Todo</h1>
+      <input type="text" placeholder="Enter your todo &#8594;" id="todo" />
+      <div class="container">
+        <!-- incomplete todo -->
+        <div class="incomplete">
+          <div class="card">
+            Click on todo to mark them complete
+            <i class="fas fa-trash"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- link to jq and external js -->
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs="
+      crossorigin="anonymous"
+    ></script>
+    <script src="./app.js"></script>
+    <script src="https://kit.fontawesome.com/ad862d8e11.js" crossorigin="anonymous"></script>
+  </body>
+</html>
