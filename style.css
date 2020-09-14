@@ -18,6 +18,11 @@ body {
   color: rgb(58, 58, 58);
 }
 
+a {
+  color: rgb(100, 100, 100);
+  text-decoration: none;
+}
+
 input {
   margin-top: 30px;
   padding: 15px;
