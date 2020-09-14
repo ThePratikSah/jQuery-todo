@@ -42,6 +42,10 @@ input {
   border-radius: 4px;
   align-items: center;
 }
+.card:hover {
+  background-color: rgb(121, 119, 119);
+  cursor: pointer;
+}
 
 ::-webkit-scrollbar {
   width: 10px;
