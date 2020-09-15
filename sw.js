@@ -1,26 +1,28 @@
 /** An empty service worker! */
-const cacheName = 'pwa-todo';
+const cacheName = "cache-v1";
 const staticAssets = [
-  './',
-  './index.html',
-  './app.js',
-  './styles.css',
-  './img/icons/icon-512x512.png'
+  "./",
+  "./index.html",
+  "./style.css",
+  "./app.js",
+  "./jquery.js",
+  "./img/todo.png",
 ];
 
-self.addEventListener('install', async event => {
-  const cache = await caches.open(cacheName); 
-  await cache.addAll(staticAssets); 
+self.addEventListener("install", (event) => {
+  event.waitUntil(
+    caches.open(cacheName).then((cache) => {
+      return cache.addAll(staticAssets);
+    })
+  );
 });
 
-
-self.addEventListener('fetch', event => {
-  const req = event.request;
-  event.respondWith(cacheFirst(req));
+self.addEventListener("activate", (event) => {
+  console.log("activate");
 });
 
-async function cacheFirst(req) {
-  const cache = await caches.open(cacheName); 
-  const cachedResponse = await cache.match(req); 
-  return cachedResponse || fetch(req); 
-}
+self.addEventListener("fetch", (event) => {
+  event.respondWith(caches.match(event.request).then(chechedRes => {
+    return cachedRes || fetch(event.request);
+  }))
+});
