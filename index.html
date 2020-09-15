@@ -9,11 +9,11 @@
   <body>
     <div class="main">
       <h1>Static Todo by <a href="https://pratiksah.com">Pratik Sah</a></h1>
-      <input type="text" placeholder="Enter your todo &#8594;" id="todo" />
+      <input type="text" placeholder="Type and press Enter &#8594;" id="todo" />
       <div class="container">
         <!-- incomplete todo -->
         <div class="incomplete">
-          <div class="card">
+          <div class="card" onclick="removeTodo(this);">
             Click on todo to remove them
           </div>
         </div>
