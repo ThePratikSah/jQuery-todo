@@ -3,9 +3,9 @@
   "short_name": "Todo",
   "start_url": ".",
   "display": "standalone",
-  "background_color": "#2A3443",
+  "background_color": "#ffffff",
   "description": "An app for your all Todos.",
-  "theme_color": "#2A3443",
+  "theme_color": "#323232",
   "icons": [
     {
       "src": "./img/icons/icon-512x512.png",

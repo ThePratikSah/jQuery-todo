@@ -46,5 +46,8 @@ let removeTodo = (index) => {
 };
 
 // Registering the service worker
-navigator.serviceWorker &&
-  navigator.serviceWorker.register("SW.js").then(function (registration) {});
+if ("serviceWorker" in navigator) {
+  navigator.serviceWorker
+    .register("sw.js")
+    .then(() => console.log("registered service worker!"));
+}
