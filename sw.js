@@ -21,8 +21,10 @@ self.addEventListener("activate", (event) => {
   console.log("activate");
 });
 
-self.addEventListener("fetch", (event) => {
-  event.respondWith(caches.match(event.request).then(chechedRes => {
-    return cachedRes || fetch(event.request);
-  }))
+self.addEventListener("fetch", event => {
+  event.respondWith(caches.match(event.request)
+    .then(response => {
+      return response || fetch(event.request)
+    })
+  );
 });
