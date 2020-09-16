@@ -8,7 +8,7 @@
   "theme_color": "#323232",
   "icons": [
     {
-      "src": "./img/todo.png",
+      "src": "https://raw.githubusercontent.com/ThePratikSah/jQuery-todo/master/img/todo.png",
       "sizes": "500x500",
       "type": "image/png"
     }

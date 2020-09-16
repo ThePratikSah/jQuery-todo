@@ -6,7 +6,7 @@ const staticAssets = [
   "./style.css",
   "./app.js",
   "./jquery.js",
-  "./img/todo.png",
+  "https://raw.githubusercontent.com/ThePratikSah/jQuery-todo/master/img/todo.png",
 ];
 
 self.addEventListener("install", (event) => {
